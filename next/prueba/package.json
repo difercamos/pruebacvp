@@ -1,0 +1,16 @@
+{
+  "name": "prueba",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "start": "next build && next start"
+  },
+  "dependencies": {
+    "next": "9.5.1",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "bootstrap": "^4.5.0",
+    "react-bootstrap": "^1.0.1"
+  }
+}

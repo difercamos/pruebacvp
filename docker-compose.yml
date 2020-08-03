@@ -1,0 +1,50 @@
+version: "3.6"
+
+services:
+  nginx:
+    image: nginx:1.13
+    restart: always
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d
+    depends_on:
+      - spring
+
+  spring:
+    build:
+      context: ./dockerfile/
+      dockerfile: Dockerfile
+    command: mvn spring-boot:run
+    volumes:
+      - ./app:/app
+      - ~/.m2:/root/.m2
+    expose: 
+      - "8080"
+    depends_on:
+      - db
+
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_DB=dk
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=Assemblix86
+    volumes:
+      - ./data:/var/lib/postgresql/data
+    expose:
+      - "5432"
+
+  next:
+    build:
+      context: ./next
+      dockerfile: Dockerfile
+    command: npm run start
+    volumes:
+      - ./next/prueba:/app
+      - /app/node_modules
+      - /app/.next
+    ports:
+      - "3000:3000"
+    depends_on:
+      - nginx

@@ -1,0 +1,16 @@
+/app/src/main/java/com/linux/project/exception/CountryNotFoundException.java
+/app/src/main/java/com/linux/project/controller/PersonController.java
+/app/src/main/java/com/linux/project/Application.java
+/app/src/main/java/com/linux/project/model/Country.java
+/app/src/main/java/com/linux/project/model/Person.java
+/app/src/main/java/com/linux/project/controller/TypeDocumentController.java
+/app/src/main/java/com/linux/project/exception/TypeDocumentNotFoundException.java
+/app/src/main/java/com/linux/project/controller/controller.java
+/app/src/main/java/com/linux/project/controller/Message.java
+/app/src/main/java/com/linux/project/configuration/SwaggerConfig.java
+/app/src/main/java/com/linux/project/exception/PersonNotFoundException.java
+/app/src/main/java/com/linux/project/repository/PersonRepository.java
+/app/src/main/java/com/linux/project/controller/CountryController.java
+/app/src/main/java/com/linux/project/model/TypeDocument.java
+/app/src/main/java/com/linux/project/repository/TypeDocumentRepository.java
+/app/src/main/java/com/linux/project/repository/CountryRepository.java
